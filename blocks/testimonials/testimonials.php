@@ -37,12 +37,13 @@ $testimonials           = get_field('testimonials');
 ?>
 
 <section class="relative">
+    <img class="lg:hidden block absolute top-[-5%] right-[0] w-[250px] lg:w-auto" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/hexagon-3.svg">
     <div class="block_content">
-        <div class="pb-[60px] lg:pb-[100px]">
+        <div class="pb-[60px] lg:pb-[100px] blur_custom-3">
             <h2 class="text-[#232323] lg:w-[40%]"> What Our Clients Say</h2>
             <p class="mt-[20px]">Lorem ipsum dolor sit amet consectetur. Massa blandit amet donec hac non phasellus placerat. </p>
         </div>
-        <div class="multiple-items-article">
+        <div class="hidden lg:block multiple-items-article">
             <?php foreach ($testimonials as $key => $testimonial) : ?>
                 <div class="rounded-[10px] bg-[#F9FAFB] slick-slide">
                     <div class="py-[45px] px-[35px]">
@@ -55,7 +56,20 @@ $testimonials           = get_field('testimonials');
                 </div>
             <?php endforeach ?>
         </div>
-        <div class="flex justify-end gap-[36px] mt-[50px]">
+        <div class="block lg:hidden">
+            <?php foreach ($testimonials as $key => $testimonial) : ?>
+                <div class="rounded-[10px] bg-[#F9FAFB] relative z-[50] mb-[26px]">
+                    <div class="py-[45px] px-[35px]">
+                        <div>
+                            <img class="w-[60%] lg:w-[80%]" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/stars.svg" alt="">
+                        </div>
+                        <span class="text-[#475467] text-[18px] font-[400] leading-[30px] my-[32px] block"> <?php echo $testimonial['paragraph'] ?></span>
+                        <span class="block text-[#475467] text-[18px] font-[600]"> <?php echo $testimonial['person_name'] ?></span>
+                    </div>
+                </div>
+            <?php endforeach ?>
+        </div>
+        <div class="hidden lg:flex justify-end gap-[36px] mt-[50px]">
             <span class="inline-block controlls prev"> <img class="cursor-pointer" src="<?php echo  get_stylesheet_directory_uri() ?>/assets/images/prev.svg" alt=""></span>
             <span class="inline-block controlls next"> <img class="cursor-pointer" src="<?php echo  get_stylesheet_directory_uri() ?>/assets/images/next.svg" alt=""></span>
         </div>

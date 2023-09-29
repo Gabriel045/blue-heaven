@@ -16,22 +16,47 @@
   $primaryNav = wp_get_nav_menu_items(3);
   ?>
 
-  <header id="header_menu " class="hidden lg:flex justify-center relative ">
+  <header id="header_menu " class="flex justify-center relative bg-primary overflow-x-clip">
     <div class="block_content max-w-[1440px] w-full items-center flex absolute z-[999]" style="padding-top:40px; padding-bottom:40px">
-      <div class="w-[15%]">
-       <a href="/home"> <img class="w-[180px]" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/Logo.svg" alt=""><a>
+      <div class="w-[50%] lg:w-[15%]">
+        <a href="/home"> <img class="w-[140px] lg:w-[180px]" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/Logo.svg" alt=""></a>
       </div>
-      <div class="w-[65%] flex justify-end">
+      <div class="hidden lg:flex w-[65%]  justify-end">
         <?php echo wp_nav_menu("3"); ?>
       </div>
-      <div class="w-[20%] text-end">
-        <a href="<?php esc_url(the_field('header', 'option'))  ?>" target="_blank" class="bg-white text-[#06385F] text-[18px] font-[500] rounded-[10px] inline-block px-[20px] py-[10px]">Get Started</a>
+      <div class="w-[50%] lg:w-[20%] text-end flex justify-end items-center">
+        <span class="inline-block cursor-pointer menu-mobile">
+          <div class="block lg:hidden" id="nav-icon4">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </span>
+        <a href="<?php esc_url(the_field('header', 'option'))  ?>" target="_blank" class="hidden lg:inline-block bg-white text-[#06385F] text-[18px] font-[500] rounded-[10px]  px-[20px] py-[10px]">Get Started</a>
       </div>
     </div>
+
+    <div class="bg-primary absolute z-[60] h-[60vh] w-full menu-mobile-container bloch lg:hidden">
+      <div class="div px-[40px] pb-[70px]">
+        <?php echo wp_nav_menu("3"); ?>
+        <div class="pt-[50px]">
+          <a href="#" class="py-[10px] px-[20px] rounded-[8px] mr-[18px] mt-[50px] bg-white text-primary text-[18px] font-[500] relative z-50">Get Started</a>
+        </div>
+      </div>
+    </div>
+
   </header>
 
 
   <script>
+    let mobile = document.querySelector(".menu-mobile")
+
+    mobile.addEventListener('click', () => {
+      document.querySelector(".menu-mobile-container").classList.toggle('active')
+      document.querySelector("#nav-icon4").classList.toggle('open')
+    })
+
+
     //let items = document.querySelectorAll(".menu-item-has-children a")
     //items.forEach((a) => {
     //  a.parentElement.addEventListener("click", (event) => {

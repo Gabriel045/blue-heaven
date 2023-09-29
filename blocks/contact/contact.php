@@ -36,14 +36,15 @@ $address = get_field('address');
 
 ?>
 
-<section class="">
+<section class="relative">
+    <img decoding="async" class="lg:hidden block absolute top-[200px] right-[0] w-[250px] lg:w-auto" src="https://blueheaven.local/wp-content/themes/blue-heaven/assets/images/hexagon-3.svg">
     <div class="block_content relative text-center before:content-[''] before:absolute before:w-[300px] before:h-[80px]
      before:bg-[#B5D3EA] before:blur-[40px] before:z-40  before:left-[-50px]">
         <div class="flex gap-[6%] flex-wrap">
-            <div class="w-[47%]">
+            <div class="w-full lg:w-[47%] mb-[60px] lg:mb-0">
                 <h2 class="relative z-50  text-start">Stay in Touch!</h2>
                 <p class="relative z-50 mt-[20px] mb-[60px] text-start"> <?php echo $paragraph ?> </p>
-                <div class="w-[55%]">
+                <div class="w-[80%] lg:w-[55%]">
                     <div class="flex">
                         <img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/letter.svg" alt="">
                         <p class="ml-[25px] text-[16px] text-start"> <?php echo $email ?> </p>
@@ -58,9 +59,9 @@ $address = get_field('address');
                     </div>
                 </div>
             </div>
-            <div class="w-[47%]">
+            <div class="w-full lg:w-[47%]">
                 <div class="relative before:content-[''] before:absolute before:w-[300px] before:h-[80px]
-                     before:bg-[#B5D3EA] before:blur-[40px] before:z-40  before:bottom-[-10px] before:right-[-100px]">
+                     before:bg-[#B5D3EA] before:blur-[40px] before:z-40  before:bottom-[-10px] before:right-0">
                     <?php echo do_shortcode('[gravityform id="1" title="false"]') ?>
                 </div>
             </div>
