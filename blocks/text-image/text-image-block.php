@@ -19,7 +19,7 @@ if (!empty($block['anchor'])) {
 }
 
 // Create class attribute allowing for custom "className" and "align" values.
-$class_name = 'hero-block';
+$class_name = 'text-image-block';
 if (!empty($block['className'])) {
     $class_name .= ' ' . $block['className'];
 }
@@ -37,9 +37,9 @@ $learn_more        = get_field('learn_more_cta');
 $learn_more_url    = get_field('learn_more_url');
 ?>
 
-<section class="">
+<section class="<?php echo ($learn_more == 'Yes') ? 'bg-[#F9FAFB]' : '' ?> relative">
     <div class="block_content flex flex-wrap lg:flex-nowrap gap-[80px] flex-<?php echo $image_position ?>">
-        <div class="flex flex-wrap lg:flex-nowrap gap-[80px] flex-<?php echo $image_position ?>">
+        <div class="flex flex-wrap lg:flex-nowrap gap-[80px] lg:flex-<?php echo $image_position ?> flex-col-reverse">
             <?php if (!empty($image)) : ?>
                 <div class="w-full lg:w-[45%]">
                     <img class="m-auto lg:m-0 rounded-[10px]" src="<?php echo $image ?>" alt="">
@@ -53,4 +53,5 @@ $learn_more_url    = get_field('learn_more_url');
             </div>
         </div>
     </div>
+    <?php echo (($learn_more == "Yes")) ? '<img class="absolute top-[-24%] right-[0]" src=" ' .get_stylesheet_directory_uri() .'/assets/images/hexagon-3.svg">' : '' ?> 
 </section>

@@ -27,12 +27,26 @@ if (!empty($block['align'])) {
     $class_name .= ' align' . $block['align'];
 }
 
+$cards = get_field('cards');
 // Load values and assign defaults.
 
 ?>
 
 <section class="">
+    
     <div class="block_content relative text-center before:content-[''] before:absolute before:w-[300px] before:h-[80px] before:bg-[#B5D3EA] before:blur-[40px] before:z-40  before:left-[38%]">
         <h2 class="relative z-50 ">Services We Offer</h2>
+        <div class="mt-[110px] flex gap-[6%] gap-y-[90px] flex-wrap">
+            <?php foreach ($cards as $key => $card) :  ?>
+                <div class="w-[47%]">
+                    <div>
+                        <img class="rounded-t-[10px]" src="<?php echo $card["image"] ?> " alt="">
+                    </div>
+                    <div class="h-[130px] flex items-center justify-center bg-[#F9FAFB] rounded-b-[10px]">
+                        <span class="text-[22px] font-[600] text-[#101828] leading-[27px]"><?php echo $card["title"] ?> </span>
+                    </div>
+                </div>
+            <?php endforeach ?>
+        </div>
     </div>
 </section>

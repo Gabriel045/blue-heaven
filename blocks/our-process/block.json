@@ -1,0 +1,18 @@
+{
+    "name": "acf/our-process",
+    "title": "Our Process",
+    "description": "A custom Our Process block.",
+    "style": [
+        "file:../../dist/output.css"
+    ],
+    "category": "custom",
+    "icon": "block-default",
+    "keywords": [
+        "Our Process"
+    ],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "our-process.php"
+    },
+    "align": "full"
+}

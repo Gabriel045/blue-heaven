@@ -8,7 +8,7 @@ module.exports = {
       },
 
       colors: {
-        'primary': '##06385F'
+        'primary': '#06385F'
       },
       height: {
  

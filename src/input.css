@@ -28,13 +28,15 @@ body {
 
 .block_content {
     max-width: 1440px;
-    padding: 150px 120px ;
+    padding: 150px 112px;
     width: 100%;
 }
 
 section {
     display: flex;
-    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow-x: hidden;
 }
 
 h1 {
@@ -92,11 +94,117 @@ p {
     left: -81px;
 }
 
-.line::before{
+.line::before {
     content: "";
     width: 2px;
     height: 100%;
     background-color: #06385F;
     display: block;
     position: absolute;
+}
+
+/* the slides */
+.slick-slide {
+    margin: 0 20px !important;
+}
+
+/* the parent */
+.slick-list {
+    margin: 0 -20px !important;
+}
+
+/* Header */
+#menu-header-menu {
+    display: flex;
+    gap: 45px;
+}
+
+
+#menu-header-menu li a {
+    color: #FFFFFF;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.hero{
+    padding-top: 150px;
+    padding-bottom: 120px
+}
+
+@media screen and (max-width: 1200px) {
+    .block_content {
+        padding: 150px 80px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    h1 {
+        font-size: 40px;
+        font-weight: 600;
+        line-height: 50px;
+        letter-spacing: -0.8px;
+    }
+    
+    h2{
+        font-size: 30px;
+        font-weight: 600;
+        line-height: 44px;
+        letter-spacing: -0.6px;
+    }
+
+    .block_content {
+        padding: 40px;
+    }
+
+    .hero {
+        padding-top: 100px;
+        padding-bottom: 60px
+    }
+
+    p {
+     font-size: 18px;
+    }
+}
+
+/* Contact Form */
+#gform_fields_1 input,
+#gform_fields_1 textarea {
+    border: 1px solid #D0D5DD;
+    border-radius: 8px;
+}
+
+#gform_fields_1 label {
+    font-size: 14px;
+    font-weight: 500;
+    text-align: left;
+    display: block;
+}
+
+.gfield_consent_label {
+    display: inline !important;
+}
+
+.ginput_container_consent {
+    text-align: start;
+}
+
+.ginput_container_consent label {
+    font-size: 16px !important;
+    font-weight: 400 !important;
+    color: #667085 !important;
+}
+
+.ginput_container_consent label a {
+    border-bottom: 1px solid #667085;
+}
+
+#gform_submit_button_1 {
+    background: #06385F;
+    text-align: center;
+    padding: 15px 0px;
+    color: white;
+    width: 100%;
+    border-radius: 8px;
+    z-index: 99999;
+    position: relative;
 }

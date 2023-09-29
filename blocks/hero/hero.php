@@ -30,20 +30,22 @@ if (!empty($block['align'])) {
 // Load values and assign defaults.
 $title           = get_field('title') ?: 'Your Title here...';
 $text            = get_field('paragraph');
+$home_hero       = get_field('home_hero');
 ?>
 
 <section class="bg-[#06385F] relative">
-    <img class="absolute right-0 bottom-0" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/hexagon.svg" alt="">
-
-    <div class="max-w-[1440px] pt-[330px] pb-[250px] px-[120px] text-left ">
-        <h1 class="w-[70%]"><?php echo $title ?> </h1>
-        <p class="text-[#ffffffcc]  mt-[30px] mb-[50px] w-[65%]"> <?php echo $text ?> </p>
-        <div>
-            <a href="#" class="py-[15px] px-[31px] rounded-[8px] mr-[18px] bg-white text-primary text-[18px] font-[500]">Credit Calculator</a>
-            <a href="#" class="py-[15px] px-[31px] rounded-[8px] bg-[#3d6482] text-white text-[18px] font-[500] ">Contact Us</a>
-        </div>
+    <img class="absolute right-[-150px] lg:right-0 bottom-0" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/hexagon.svg" alt="">
+    <div class="hero block_content max-w-[1440px] text-left">
+        <h1 class="lg:w-[70%]"><?php echo ($home_hero == "Yes") ? $title : the_title() ?> </h1>
+        <?php echo ($home_hero == "Yes") ? '<p class="text-[#ffffffcc]  mt-[30px] mb-[50px] lg:w-[65%]"> ' . $text . ' </p>' : '' ?>
+        <?php if ($home_hero == "Yes") : ?>
+            <div>
+                <a href="#" class="py-[10px] lg:py-[15px] px-[20px] lg:px-[31px] rounded-[8px] mr-[18px] bg-white text-primary text-[16px] lg:text-[18px] font-[500] relative z-50">Credit Calculator</a>
+                <a href="#" class="py-[10px] lg:py-[15px] px-[20px] lg:px-[31px] rounded-[8px] bg-[#3d6482] text-white text-[16px] lg:text-[18px] font-[500]  relative z-50">Contact Us</a>
+            </div>
+        <?php endif ?>
     </div>
 
-    <img class="absolute top-0 left-0" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/hexagon-2.svg" alt="">
+    <?php echo ($home_hero == "Yes") ? '<img class="hidden lg:block absolute top-0 left-0" src="' . get_stylesheet_directory_uri() . '/assets/images/hexagon-2.svg" alt="">' : '' ?>
 
 </section>
