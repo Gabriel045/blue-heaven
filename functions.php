@@ -44,6 +44,7 @@ function af_add_theme_scripts() {
         true
     );
 }
+add_theme_support('post-thumbnails');
 
 function menu()
 {
