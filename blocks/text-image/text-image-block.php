@@ -42,16 +42,17 @@ $learn_more_url    = get_field('learn_more_url');
         <div class="direction flex flex-wrap lg:flex-nowrap gap-[40px] lg:gap-[80px] lg:flex-<?php echo $image_position ?> flex-col-reverse">
             <?php if (!empty($image)) : ?>
                 <div class="w-full lg:w-[45%]">
-                    <img class="m-auto lg:m-0 rounded-[10px] relative z-50" src="<?php echo $image ?>" alt="">
+                    <img class="lg:w-[547px] lg:h-[447px] m-auto lg:m-0 rounded-[10px] relative z-50" src="<?php echo $image ?>" alt="">
                 </div>
             <?php endif ?>
 
             <div class="<?php echo !empty($image) ? ' w-full lg:w-[50%]' : 'full' ?> relative lg:flex lg:flex-col lg:justify-center blur_custom-2">
                 <h2 class="relative z-50"> <?php echo $title ?> </h2>
                 <p class="text-[#475467] my-[20px] relative z-50"><?php echo $paragraph ?> </p>
-                <?php echo ($learn_more == "Yes") ? '<a href="' . $learn_more_url . '" class="hidden  button_custom lg:inline-block">Learn More</a>' : '' ?>
+                <?php echo ($learn_more == "Yes") ? '<a href="' . $learn_more_url . '" class="button_hover hidden  button_custom lg:inline-block relative z-50">Learn More</a>' : '' ?>
             </div>
         </div>
     </div>
-    <?php echo (($learn_more == "Yes")) ? '<img class="absolute top-[-24%] right-[0] w-[250px] lg:w-auto" src=" ' . get_stylesheet_directory_uri() . '/assets/images/hexagon-3.svg">' : '' ?>
+    <?php echo (($learn_more == "Yes")) ? '<img class="absolute top-[-24%] right-[0] lg:h-[50vw] h-[500px] lg:w-auto" src=" ' . get_stylesheet_directory_uri() . '/assets/images/hexagon-3.svg">' : '' ?>
 </section>
+

@@ -45,7 +45,7 @@
                 </div>
             </div>
         </div>
-        <img class="block lg:hidden absolute bottom-0 w-full" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/hexagon-4.svg" alt="">
+        <img class=" absolute bottom-0 lg:w-[50%]" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/hexagon-footer-mobile.svg" alt="">
     </section>
 
 </footer>

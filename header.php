@@ -32,11 +32,11 @@
             <span></span>
           </div>
         </span>
-        <a href="<?php esc_url(the_field('header', 'option'))  ?>" target="_blank" class="hidden lg:inline-block bg-white text-[#06385F] text-[18px] font-[500] rounded-[10px]  px-[20px] py-[10px]">Get Started</a>
+        <a href="<?php esc_url(the_field('header', 'option'))  ?>" target="_blank" class="button_hover hidden lg:inline-block bg-white text-[#06385F] text-[18px] font-[500] rounded-[10px]  px-[20px] py-[10px]">Get Started</a>
       </div>
     </div>
 
-    <div class="bg-primary absolute z-[60] h-[60vh] w-full menu-mobile-container bloch lg:hidden">
+    <div class="bg-primary absolute z-[60] h-[80vh] w-full menu-mobile-container bloch lg:hidden">
       <div class="div px-[40px] pb-[70px]">
         <?php echo wp_nav_menu("3"); ?>
         <div class="pt-[50px]">

@@ -580,6 +580,10 @@ video {
   bottom: 0px;
 }
 
+.bottom-\[-10px\] {
+  bottom: -10px;
+}
+
 .left-0 {
   left: 0px;
 }
@@ -596,12 +600,12 @@ video {
   top: 0px;
 }
 
-.top-\[-100px\] {
-  top: -100px;
-}
-
 .top-\[-24\%\] {
   top: -24%;
+}
+
+.top-\[-250px\] {
+  top: -250px;
 }
 
 .top-\[-5\%\] {
@@ -618,10 +622,6 @@ video {
 
 .top-\[200px\] {
   top: 200px;
-}
-
-.top-\[-250px\] {
-  top: -250px;
 }
 
 .z-10 {
@@ -756,16 +756,20 @@ video {
   height: 48px;
 }
 
+.h-\[500px\] {
+  height: 500px;
+}
+
 .h-\[540px\] {
   height: 540px;
 }
 
-.h-\[60vh\] {
-  height: 60vh;
-}
-
 .h-\[800px\] {
   height: 800px;
+}
+
+.h-\[80vh\] {
+  height: 80vh;
 }
 
 .w-1\/2 {
@@ -1209,17 +1213,51 @@ p {
 }
 
 .hero {
-  padding-top: 150px;
-  padding-bottom: 120px
+  padding-top: 230px;
+  padding-bottom: 140px;
+}
+
+.home-hero {
+  padding-top: 330px;
+  padding-bottom: 250px
+}
+
+.spf-phone.error-msg{
+  display: flex !important;
 }
 
 @media screen and (max-width: 1200px) {
   .block_content {
     padding: 150px 80px;
   }
+
+  .home-hero {
+    padding-top: 330px;
+    padding-bottom: 250px;
+  }
+
+  #menu-header-menu{
+    gap: 25px !important;
+  }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 640px) {
+  #input_1_1_3_container {
+    margin-bottom: 20px !important;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .home-hero {
+    padding-top: 170px !important;
+    padding-bottom: 80px !important;
+  }
+
+  .hero {
+    padding-top: 160px !important;
+    padding-bottom: 60px !important;
+  }
+
   h1 {
     font-size: 40px;
     font-weight: 600;
@@ -1236,11 +1274,6 @@ p {
 
   .block_content {
     padding: 60px 40px;
-  }
-
-  .hero {
-    padding-top: 120px;
-    padding-bottom: 60px
   }
 
   p {
@@ -1294,6 +1327,15 @@ p {
 
 /* Contact Form */
 
+.gfield_required_text{
+  display: none !important;
+}
+
+#gform_confirmation_message_1{
+  position: relative;
+  z-index: 50;
+}
+
 #gform_fields_1 input,
 #gform_fields_1 textarea {
   border: 1px solid #D0D5DD;
@@ -1334,6 +1376,11 @@ p {
   border-radius: 8px;
   z-index: 99999;
   position: relative;
+  cursor: pointer;
+}
+
+#gform_submit_button_1:hover{
+  transform: translateY(2px);
 }
 
 .menu-mobile-container.active {
@@ -1407,6 +1454,11 @@ p {
   transform: rotate(-45deg);
   top: 18px;
   left: 0px;
+}
+
+.button_hover:hover{
+  transform: translateY(2px);
+  /*transform: scale(1.01);*/
 }
 
 .before\:absolute::before {
@@ -1599,6 +1651,14 @@ p {
     display: none;
   }
 
+  .lg\:h-\[447px\] {
+    height: 447px;
+  }
+
+  .lg\:h-\[50vw\] {
+    height: 50vw;
+  }
+
   .lg\:w-1\/2 {
     width: 50%;
   }
@@ -1637,6 +1697,10 @@ p {
 
   .lg\:w-\[50\%\] {
     width: 50%;
+  }
+
+  .lg\:w-\[547px\] {
+    width: 547px;
   }
 
   .lg\:w-\[55\%\] {

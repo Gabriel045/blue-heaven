@@ -37,7 +37,7 @@ if (!empty($block['align'])) {
         <div class="flex lg:flex-nowrap flex-wrap">
             <div class="w-full lg:text-start text-center lg:w-1/2 relative mb-[60px] lg:mb-0 blur_custom">
                 <h2 class="mb-[46px] z-50 relative">Why R&D Tax Credits</h2>
-                <a href="#" class="button_custom z-50 relative">Join Program</a>
+                <a href="#" class="button_hover hidden lg:inline-block  button_custom  relative z-50">Join Program</a>
             </div>
             <div class="lg:w-1/2 relative before:content-[''] before:w-[2px] before:h-[75%] before:z-40 before:top-[5%] before:bg-[#06385fb5] before:block before:absolute before:left-[24px]
              after:content-['']  after:w-[73px] after:h-[70%] after:bg-[#B5D3EA] after:block after:absolute after:top-[10%] after:left-[-10px] after:z-30 after:blur-[40px]">
