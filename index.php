@@ -2,17 +2,18 @@
 
 get_header();
 
-if ( have_posts() ) {
-    while ( have_posts() ) {
+if (have_posts()) {
+    while (have_posts()) {
         the_post();
-        if ( is_single() ) {
-            get_template_part( 'template-parts/single' );
+        if (is_single()) {
+            (get_post_type() == "post") ? get_template_part('template-parts/single-post') : get_template_part('template-parts/single');
         } else {
-            get_template_part( 'template-parts/archive' );
+
+            get_template_part('template-parts/archive');
         }
     }
 } else {
-    get_template_part( 'template-parts/no-content.php' );
+    get_template_part('template-parts/no-content.php');
 }
 
 get_footer();

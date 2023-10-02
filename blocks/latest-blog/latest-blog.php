@@ -47,25 +47,27 @@ $query = new WP_Query($args);
 
 ?>
 
-<section class="">
+<section id="latest_blog" class="">
     <div class="block_content flex flex-col lg:items-center">
-        <h2 class=""> <?php echo $title ?> </h2>
-        <p class="mt-[20px] mb-[90px] text-[#475467] lg:text-center lg:w-[70%]"> <?php echo $paragraph ?> </p>
+        <h2 style="margin-top:0px" class=""> <?php echo $title ?> </h2>
+        <p style="margin-bottom:90px"  class="mt-[20px] mb-[90px] text-[#475467] lg:text-center lg:w-[70%]"> <?php echo $paragraph ?> </p>
         <div class="flex justify-center flex-wrap gap-[2%]">
             <?php foreach ($query->posts as $key => $post) :
                 $user = get_user_by('id', $post->post_author)->user_login;
                 $date = $post->post_date;
                 $newDate = date("d M Y", strtotime($date)); ?>
-                <div class="w-[32%]">
-                    <div>
-                        <?php echo get_the_post_thumbnail($post->ID) ?>
-                    </div>
-                    <h3 class="text-[24px] font-[600] my-[24px] text-[#101828]"><?php echo $post->post_title ?></h3>
-                    <div class="text-[14px] font-[600] text-[#06385F] flex ">
-                        <span> <?php echo $user ?> </span>
-                        <span class="text-[25px] h-[2px] mt-[-13px] mx-[4px]">.</span>
-                        <span><?php echo $newDate  ?></span>
-                    </div>
+                <div class="lg:w-[32%]">
+                    <a class="cursor-pointer" href="<?php echo get_the_permalink($post->ID,) ?>">
+                        <div>
+                            <?php echo get_the_post_thumbnail($post->ID) ?>
+                        </div>
+                        <h3 class="text-[24px] font-[600] my-[24px] text-[#101828]"><?php echo $post->post_title ?></h3>
+                        <div class="text-[14px] font-[600] text-[#06385F] flex pb-[32px] lg:pb-0">
+                            <span> <?php echo $user ?> </span>
+                            <span class="text-[25px] h-[2px] mt-[-13px] mx-[4px]">.</span>
+                            <span><?php echo $newDate  ?></span>
+                        </div>
+                    </a>
                 </div>
             <?php endforeach ?>
         </div>

@@ -620,6 +620,10 @@ video {
   top: 200px;
 }
 
+.top-\[30\%\] {
+  top: 30%;
+}
+
 .z-10 {
   z-index: 10;
 }
@@ -667,6 +671,11 @@ video {
 .my-\[35px\] {
   margin-top: 35px;
   margin-bottom: 35px;
+}
+
+.my-\[40px\] {
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 
 .my-\[70px\] {
@@ -746,22 +755,6 @@ video {
   margin-top: 70px;
 }
 
-.mb-\[\] {
-  margin-bottom: ;
-}
-
-.mb-\[18px\] {
-  margin-bottom: 18px;
-}
-
-.mb-\[16px\] {
-  margin-bottom: 16px;
-}
-
-.mb-\[10px\] {
-  margin-bottom: 10px;
-}
-
 .block {
   display: block;
 }
@@ -822,8 +815,8 @@ video {
   width: 20%;
 }
 
-.w-\[25\%\] {
-  width: 25%;
+.w-\[200px\] {
+  width: 200px;
 }
 
 .w-\[250px\] {
@@ -832,10 +825,6 @@ video {
 
 .w-\[300px\] {
   width: 300px;
-}
-
-.w-\[32\%\] {
-  width: 32%;
 }
 
 .w-\[48px\] {
@@ -1022,6 +1011,14 @@ video {
   padding-bottom: 45px;
 }
 
+.pb-\[32px\] {
+  padding-bottom: 32px;
+}
+
+.pb-\[45px\] {
+  padding-bottom: 45px;
+}
+
 .pb-\[60px\] {
   padding-bottom: 60px;
 }
@@ -1036,14 +1033,6 @@ video {
 
 .pt-\[50px\] {
   padding-top: 50px;
-}
-
-.pb-\[4\] {
-  padding-bottom: 4;
-}
-
-.pb-\[45px\] {
-  padding-bottom: 45px;
 }
 
 .text-left {
@@ -1074,6 +1063,10 @@ video {
   font-size: 18px;
 }
 
+.text-\[20px\] {
+  font-size: 20px;
+}
+
 .text-\[22px\] {
   font-size: 22px;
 }
@@ -1084,6 +1077,10 @@ video {
 
 .text-\[25px\] {
   font-size: 25px;
+}
+
+.text-\[30px\] {
+  font-size: 30px;
 }
 
 .font-\[400\] {
@@ -1142,10 +1139,6 @@ video {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-.text-\[\] {
-  color: ;
 }
 
 @font-face {
@@ -1297,7 +1290,7 @@ p {
   padding-bottom: 250px
 }
 
-.spf-phone.error-msg{
+.spf-phone.error-msg {
   display: flex !important;
 }
 
@@ -1311,7 +1304,7 @@ p {
     padding-bottom: 250px;
   }
 
-  #menu-header-menu{
+  #menu-header-menu {
     gap: 25px !important;
   }
 }
@@ -1398,15 +1391,53 @@ p {
   #gform_submit_button_1 {
     padding: 10px 0px !important;
   }
+
+  #blog_content {
+    .wp-block-image {
+      padding: 0px 40px !important;
+    }
+  }
+
+  #blog_content h2 {
+    padding: 0px 40px !important;
+    margin-top: 80px !important;
+  }
+
+  #blog_content p {
+    padding: 0px 40px !important;
+  }
+
+  #get_in_touch h2,
+    #latest_blog h2 {
+    padding: 0px !important;
+    margin-top: 0px !important;
+  }
+
+  #get_in_touch p,
+    #latest_blog p {
+    padding: 0px !important;
+  }
+
+  #blog_content #get_in_touch {
+    margin-top: 80px !important;
+  }
+
+  #blog_content .wp-block-image img {
+    margin-top: 80px !important;
+  }
+
+  #blog_content {
+    margin-top: 0px !important;
+  }
 }
 
 /* Contact Form */
 
-.gfield_required_text{
+.gfield_required_text {
   display: none !important;
 }
 
-#gform_confirmation_message_1{
+#gform_confirmation_message_1 {
   position: relative;
   z-index: 50;
 }
@@ -1454,13 +1485,13 @@ p {
   cursor: pointer;
 }
 
-#gform_submit_button_1:hover{
+#gform_submit_button_1:hover {
   transform: translateY(2px);
 }
 
 .menu-mobile-container.active {
-  top:80px;
-  right:0;
+  top: 80px;
+  right: 0;
   opacity: 1;
   transition: all 0.8s ease-out;
 }
@@ -1531,9 +1562,57 @@ p {
   left: 0px;
 }
 
-.button_hover:hover{
+.button_hover:hover {
   transform: translateY(2px);
   /*transform: scale(1.01);*/
+}
+
+/* Blog Content */
+
+#blog_content {
+  .wp-block-image img {
+    width: 1440px !important;
+    max-height: 520px;
+    border-radius: 10px;
+    margin-top: 100px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .wp-block-image {
+    max-width: 1440px;
+  }
+  .wp-block-image {
+    padding-left: 300px;
+    padding-right: 300px;
+  }
+}
+
+#blog_content h2 {
+  max-width: 1440px;
+  padding-left: 300px;
+  padding-right: 300px;
+  margin-top: 100px;
+  margin-bottom: 20px;
+  color: #101828;
+  position: relative;
+  z-index: 50;
+}
+
+#blog_content p {
+  max-width: 1440px;
+  padding-left: 300px;
+  padding-right: 300px;
+  color: #475467;
+  margin: 20px 0px;
+  width: 100%;
+}
+
+#blog_content #get_in_touch {
+  margin-top: 160px;
+}
+
+#blog_content {
+  margin-top: 60px;
 }
 
 .before\:absolute::before {
@@ -1689,14 +1768,6 @@ p {
   margin-bottom: 0px;
 }
 
-.last\:pb-\[\]:last-child {
-  padding-bottom: ;
-}
-
-.last\:pb-\[0px\]:last-child {
-  padding-bottom: 0px;
-}
-
 .last\:pb-0:last-child {
   padding-bottom: 0px;
 }
@@ -1772,6 +1843,14 @@ p {
 
   .lg\:w-\[30\%\] {
     width: 30%;
+  }
+
+  .lg\:w-\[300px\] {
+    width: 300px;
+  }
+
+  .lg\:w-\[32\%\] {
+    width: 32%;
   }
 
   .lg\:w-\[40\%\] {
@@ -1863,6 +1942,10 @@ p {
   .lg\:py-\[15px\] {
     padding-top: 15px;
     padding-bottom: 15px;
+  }
+
+  .lg\:pb-0 {
+    padding-bottom: 0px;
   }
 
   .lg\:pb-\[100px\] {

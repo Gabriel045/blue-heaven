@@ -1,19 +1,18 @@
 {
-    "name": "acf/text-cta",
-    "title": "Text CTA Block",
-    "description": "A custom Text CTA Block block.",
+    "name": "acf/team",
+    "title": "Team",
+    "description": "A custom Team block.",
     "style": [
         "file:../../dist/output.css"
     ],
     "category": "custom",
     "icon": "block-default",
     "keywords": [
-        "Text",
-        "CTA"
+        "Team"
     ],
     "acf": {
         "mode": "preview",
-        "renderTemplate": "text-cta.php"
+        "renderTemplate": "team.php"
     },
     "align": "full"
 }
