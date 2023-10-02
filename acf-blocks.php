@@ -13,4 +13,5 @@ function register_acf_blocks()
     register_block_type(__DIR__ . '/blocks/our-process');
     register_block_type(__DIR__ . '/blocks/contact');
     register_block_type(__DIR__ . '/blocks/latest-blog');
+    register_block_type(__DIR__ . '/blocks/text-cta');
 }
