@@ -29,6 +29,8 @@ if (!empty($block['align'])) {
 
 // Load values and assign defaults.
 
+$title                  = get_field('title');
+$paragraph                  = get_field('paragraph');
 $testimonials           = get_field('testimonials');
 
 //echo "<pre>";
@@ -40,8 +42,8 @@ $testimonials           = get_field('testimonials');
     <img class="lg:hidden block absolute top-[-5%] right-[0] w-[250px] lg:w-auto" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/hexagon-3.svg">
     <div class="block_content">
         <div class="pb-[60px] lg:pb-[100px] blur_custom-3">
-            <h2 class="text-[#232323] lg:w-[40%]"> What Our Clients Say</h2>
-            <p class="mt-[20px]">Lorem ipsum dolor sit amet consectetur. Massa blandit amet donec hac non phasellus placerat. </p>
+            <h2 class="text-[#232323] lg:w-[40%]"> <?php echo $title ?></h2>
+            <p class="mt-[20px] lg:w-1/2"><?php echo $paragraph?> </p>
         </div>
         <div class="hidden lg:block multiple-items-article">
             <?php foreach ($testimonials as $key => $testimonial) : ?>
