@@ -28,9 +28,12 @@ if (!empty($block['align'])) {
 }
 
 // Load values and assign defaults.
-$title           = get_field('title') ?: 'Your Title here...';
-$text            = get_field('paragraph');
-$home_hero       = get_field('home_hero');
+$title = get_field('title') ?: 'Your Title here...';
+$text = get_field('paragraph');
+$home_hero = get_field('home_hero');
+$first_button = get_field('first_button');
+$second_button = get_field('second_button');
+
 ?>
 
 <section class="bg-[#06385F] relative">
@@ -39,12 +42,10 @@ $home_hero       = get_field('home_hero');
     <div class="<?php echo ($home_hero == "Yes") ? "home-hero" : "hero" ?>  block_content max-w-[1440px] text-left">
         <h1 class="lg:w-[70%]"><?php echo  $title  ?> </h1>
         <?php echo (!empty($text)) ? '<p class="text-[#ffffffcc]  mt-[30px] mb-[50px] lg:w-[65%]"> ' . $text . ' </p>' : '' ?>
-        <?php if ($home_hero == "Yes") : ?>
-            <div class="flex flex-wrap gap-y-[30px] ">
-                <a href="#" class="button_hover py-[10px] lg:py-[15px] px-[20px] lg:px-[31px] rounded-[8px] mr-[18px] bg-white text-primary text-[16px] lg:text-[18px] font-[500] relative z-50">Credit Calculator</a>
-                <a href="#" class="button_hover py-[10px] lg:py-[15px] px-[20px] lg:px-[31px] rounded-[8px] bg-[#3d6482] text-white text-[16px] lg:text-[18px] font-[500]  relative z-50">Contact Us</a>
-            </div>
-        <?php endif ?>
+        <div class="flex flex-wrap gap-y-[30px] ">
+            <?php echo (!empty($first_button["url"])) ? '<a target="_blank" href="' . $first_button["url"] . '" class="button_hover py-[10px] lg:py-[15px] px-[20px] lg:px-[31px] rounded-[8px] mr-[18px] bg-white text-primary text-[16px] lg:text-[18px] font-[500] relative z-50">' . $first_button['text'] . '</a>' : '' ?>
+            <?php echo (!empty($second_button["url"])) ? '<a target="_blank" href="' . $second_button["url"] . '" class="button_hover py-[10px] lg:py-[15px] px-[20px] lg:px-[31px] rounded-[8px] bg-[#3d6482] text-white text-[16px] lg:text-[18px] font-[500]  relative z-50">' . $second_button['text'] . '</a>' : '' ?>
+        </div>
     </div>
     <?php echo ($home_hero == "Yes") ? '<img class="hidden lg:block absolute top-0 left-0" src="' . get_stylesheet_directory_uri() . '/assets/images/hexagon-2.svg" alt="">' : '' ?>
 </section>

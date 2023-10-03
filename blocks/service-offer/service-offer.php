@@ -27,15 +27,16 @@ if (!empty($block['align'])) {
     $class_name .= ' align' . $block['align'];
 }
 
-$cards = get_field('cards');
 // Load values and assign defaults.
+$cards = get_field('cards');
+$title = get_field('title');
 
 ?>
 
 <section class="relative">
     <div class="block_content relative text-center ">
         <div class="relative z-50 inline-block before:content-[''] before:absolute before:w-[300px] before:h-[80px] before:bg-[#B5D3EA] before:blur-[40px] before:z-40 before:left-0">
-            <h2 class="relative z-50">Services We Offer</h2>
+            <h2 class="relative z-50"><?php echo $title ?></h2>
         </div>
         <div class="mt-[110px] flex gap-[6%] lg:gap-y-[90px] gap-y-[30px] flex-wrap">
             <?php foreach ($cards as $key => $card) :  ?>

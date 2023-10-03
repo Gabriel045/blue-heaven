@@ -29,10 +29,11 @@ if (!empty($block['align'])) {
 
 
 // Load values and assign defaults.
-$paragraph = get_field('paragraph');
-$email = get_field('email');
-$phone = get_field('phone');
-$address = get_field('address');
+$title      = get_field('title');
+$paragraph  = get_field('paragraph');
+$email      = get_field('email');
+$phone      = get_field('phone');
+$address    = get_field('address');
 
 ?>
 
@@ -42,7 +43,7 @@ $address = get_field('address');
      before:bg-[#B5D3EA] before:blur-[40px] before:z-40  before:left-[-50px]">
         <div class="flex gap-[6%] flex-wrap">
             <div class="w-full lg:w-[47%] mb-[60px] lg:mb-0">
-                <h2 class="relative z-50  text-start">Stay in Touch!</h2>
+                <h2 class="relative z-50  text-start"><?php echo $title ?></h2>
                 <p class="relative z-50 mt-[20px] mb-[60px] text-start"> <?php echo $paragraph ?> </p>
                 <div class="w-[80%] lg:w-[55%]">
                     <div class="flex">

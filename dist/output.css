@@ -1239,6 +1239,7 @@ p {
   filter: blur(40px);
   top: -30px;
   left: -81px;
+  z-index: 4;
 }
 
 .line::before {
@@ -1645,6 +1646,11 @@ p {
   right: 0px;
 }
 
+.before\:top-\[30px\]::before {
+  content: var(--tw-content);
+  top: 30px;
+}
+
 .before\:top-\[5\%\]::before {
   content: var(--tw-content);
   top: 5%;
@@ -1658,6 +1664,11 @@ p {
 .before\:block::before {
   content: var(--tw-content);
   display: block;
+}
+
+.before\:h-\[60\%\]::before {
+  content: var(--tw-content);
+  height: 60%;
 }
 
 .before\:h-\[75\%\]::before {

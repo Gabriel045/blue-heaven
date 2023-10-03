@@ -94,6 +94,7 @@ p {
     filter: blur(40px);
     top: -30px;
     left: -81px;
+    z-index: 4;
 }
 
 .line::before {
