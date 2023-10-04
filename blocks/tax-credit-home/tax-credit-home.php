@@ -19,7 +19,7 @@ if (!empty($block['anchor'])) {
 }
 
 // Create class attribute allowing for custom "className" and "align" values.
-$class_name = 'tax-credit-home-block';
+$class_name = 'list-item-block';
 if (!empty($block['className'])) {
     $class_name .= ' ' . $block['className'];
 }
@@ -28,21 +28,22 @@ if (!empty($block['align'])) {
 }
 
 // Load values and assign defaults.
+$background  = get_field('background');
 $title = get_field('title');
 $cta   = get_field('cta');
 $items   = get_field('items');
 
 ?>
 
-<section class="bg-[#F9FAFB] relative">
-    <img class="absolute lg:hidden w-[300px] h-[800px] right-0 top-[-50%]" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/hexagon-3.svg" alt="">
+<section class="<?php echo ($background == 'Gray') ? 'bg-[#F9FAFB]' :  'bg-[#fff]' ?> relative">
+    <img class="absolute w-[300px] h-[800px] rotate-180 left-0 top-[10%]" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/hexagon-3.svg" alt="">
     <div class="block_content">
         <div class="flex lg:flex-nowrap flex-wrap">
             <div class="w-full lg:text-start text-center lg:w-1/2 relative mb-[60px] lg:mb-0 blur_custom">
                 <h2 class="mb-[46px] z-50 relative"><?php echo $title ?></h2>
                 <?php echo (!empty($cta["url"])) ? '<a target="_blank" href="' . $cta["url"] . '" class="button_hover hidden lg:inline-block  button_custom  relative z-50">' . $cta['text'] . '</a>' : '' ?>
             </div>
-            <div class="lg:w-1/2 relative before:content-[''] before:w-[2px] <?php echo (count($items)<= 3)? 'before:h-[60%]' : 'before:h-[75%]' ?> before:z-40 before:top-[30px] before:bg-[#06385fb5] before:block before:absolute before:left-[24px]
+            <div class="lg:w-1/2 relative before:content-[''] before:w-[2px] <?php echo (count($items) <= 3) ? 'before:h-[60%]' : 'before:h-[75%]' ?> before:z-40 before:top-[30px] before:bg-[#06385fb5] before:block before:absolute before:left-[24px]
              after:content-['']  after:w-[73px] after:h-[70%] after:bg-[#B5D3EA] after:block after:absolute after:top-[10%] after:left-[-10px] after:z-30 after:blur-[40px]">
 
                 <?php foreach ($items as $key => $item) : ?>

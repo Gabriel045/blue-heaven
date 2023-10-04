@@ -55,8 +55,10 @@ $address    = get_field('address');
                         <p class="ml-[25px] text-[16px] text-start"> <?php echo $phone ?> </p>
                     </div>
                     <div class="flex">
-                        <img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/location.svg" alt="">
-                        <p class="ml-[25px] text-[16px] text-start"> <?php echo $address ?> </p>
+                        <?php if(!empty($address)) :?>
+                            <img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/location.svg" alt="">
+                            <p class="ml-[25px] text-[16px] text-start"> <?php echo $address ?> </p>
+                        <?php endif ?>
                     </div>
                 </div>
             </div>

@@ -45,7 +45,7 @@ $sections  = get_field('section'); ?>
             <div class="mb-[100px] last:mb-0 direction flex flex-wrap lg:flex-nowrap gap-[40px] lg:gap-[80px] lg:flex-<?php echo $image_position ?> flex-col-reverse">
                 <?php if (!empty($image)) : ?>
                     <div class="w-full lg:w-[45%]">
-                        <img class="lg:w-[547px] lg:h-[447px] m-auto lg:m-0 rounded-[10px] relative z-50" src="<?php echo $image ?>" alt="">
+                        <img class="lg:w-[547px] lg:h-[447px] m-auto lg:m-0 rounded-[10px] relative z-50 object-cover" src="<?php echo $image ?>" alt="">
                     </div>
                 <?php endif ?>
 

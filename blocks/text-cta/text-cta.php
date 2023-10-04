@@ -30,17 +30,17 @@ if (!empty($block['align'])) {
 // Load values and assign defaults.
 $title              = get_field('title');
 $paragraph          = get_field('paragraph');
-$get_started_url    = get_field('learn_more_url');
+$cta                = get_field('cta');
 
 ?>
 
-<section id="get_in_touch" class="bg-[#F9FAFB] w-full relative">
+<section id="get_in_touch" class="bg-[#F9FAFB] w-full">
     <div class="block_content">
         <div class="mb-[100px] last:mb-0 direction flex flex-col items-center relative z-[50]
         before:content-[''] before:absolute before:w-[300px] before:h-[80px] before:bg-[#B5D3EA] before:blur-[40px] before:z-40">
             <h2 class="relative z-50 " style="margin-top:0px"> <?php echo $title ?> </h2>
             <p class="text-[#475467] my-[40px] relative z-50 text-center lg:w-[70%]" ><?php echo $paragraph ?> </p>
-            <a href="<?php echo $get_started_url ?> " class="button_hover button_custom relative z-50">Get Started</a>
+            <?php echo (!empty($cta['url'])) ? '<a href="'.$cta['url'].' " class="button_hover button_custom relative z-50">'.$cta['text'] .'</a>' : '' ?> 
         </div>
     </div>
     <?php echo (get_post_type() == "post") ? '<img decoding="async" class="absolute hidden lg:block w-[300px] h-[800px] left-0 top-[20%] rotate-180" src="' . get_stylesheet_directory_uri() . '/assets/images/hexagon-3.svg" alt="">' : '' ?>

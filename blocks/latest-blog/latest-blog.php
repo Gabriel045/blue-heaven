@@ -41,16 +41,12 @@ $args = array(
 );
 
 $query = new WP_Query($args);
-
-
-
-
 ?>
 
 <section id="latest_blog" class="">
     <div class="block_content flex flex-col lg:items-center">
         <h2 style="margin-top:0px" class=""> <?php echo $title ?> </h2>
-        <p style="margin-bottom:90px"  class="mt-[20px] mb-[90px] text-[#475467] lg:text-center lg:w-[70%]"> <?php echo $paragraph ?> </p>
+        <p style="margin-bottom:90px" class="mt-[20px] mb-[90px] text-[#475467] lg:text-center lg:w-[70%]"> <?php echo $paragraph ?> </p>
         <div class="flex justify-center flex-wrap gap-[2%]">
             <?php foreach ($query->posts as $key => $post) :
                 $user = get_user_by('id', $post->post_author)->user_login;
@@ -58,7 +54,7 @@ $query = new WP_Query($args);
                 $newDate = date("d M Y", strtotime($date)); ?>
                 <div class="lg:w-[32%]">
                     <a class="cursor-pointer" href="<?php echo get_the_permalink($post->ID,) ?>">
-                        <div>
+                        <div class="thumbnail">
                             <?php echo get_the_post_thumbnail($post->ID) ?>
                         </div>
                         <h3 class="text-[24px] font-[600] my-[24px] text-[#101828]"><?php echo $post->post_title ?></h3>
@@ -71,7 +67,11 @@ $query = new WP_Query($args);
                 </div>
             <?php endforeach ?>
         </div>
+
+        <?php echo (is_front_page()) ? '<a target="_blank" href="/blogs" class="button_hover hidden lg:inline-block  button_custom  relative z-50">See More</a>' : '' ?>
+            
+       
+
     </div>
-    </div>
-    <!--<?php echo (($learn_more == "Yes")) ? '<img class="absolute top-[-24%] right-[0] lg:h-[50vw] h-[500px] lg:w-auto" src=" ' . get_stylesheet_directory_uri() . '/assets/images/hexagon-3.svg">' : '' ?>-->
+    <?php echo (!is_front_page()) ? '<img class="absolute top-[-24%] right-[0] lg:h-[50vw] h-[500px] lg:w-auto" src=" ' . get_stylesheet_directory_uri() . '/assets/images/hexagon-3.svg">' : '' ?>
 </section>

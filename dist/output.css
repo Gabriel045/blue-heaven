@@ -584,6 +584,10 @@ video {
   bottom: -10px;
 }
 
+.bottom-\[30\%\] {
+  bottom: 30%;
+}
+
 .left-0 {
   left: 0px;
 }
@@ -608,8 +612,8 @@ video {
   top: -5%;
 }
 
-.top-\[-50\%\] {
-  top: -50%;
+.top-\[10\%\] {
+  top: 10%;
 }
 
 .top-\[20\%\] {
@@ -678,9 +682,8 @@ video {
   margin-bottom: 40px;
 }
 
-.my-\[70px\] {
-  margin-top: 70px;
-  margin-bottom: 70px;
+.mb-0 {
+  margin-bottom: 0px;
 }
 
 .mb-\[100px\] {
@@ -711,6 +714,10 @@ video {
   margin-bottom: 60px;
 }
 
+.mb-\[80px\] {
+  margin-bottom: 80px;
+}
+
 .mb-\[90px\] {
   margin-bottom: 90px;
 }
@@ -739,6 +746,10 @@ video {
   margin-top: 110px;
 }
 
+.mt-\[16px\] {
+  margin-top: 16px;
+}
+
 .mt-\[20px\] {
   margin-top: 20px;
 }
@@ -749,10 +760,6 @@ video {
 
 .mt-\[50px\] {
   margin-top: 50px;
-}
-
-.mt-\[70px\] {
-  margin-top: 70px;
 }
 
 .block {
@@ -773,6 +780,10 @@ video {
 
 .h-\[130px\] {
   height: 130px;
+}
+
+.h-\[270px\] {
+  height: 270px;
 }
 
 .h-\[2px\] {
@@ -862,6 +873,10 @@ video {
 
 .cursor-pointer {
   cursor: pointer;
+}
+
+.flex-row {
+  flex-direction: row;
 }
 
 .flex-col {
@@ -961,6 +976,11 @@ video {
   background-color: rgb(249 250 251 / var(--tw-bg-opacity));
 }
 
+.bg-\[\#fff\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
 .bg-primary {
   --tw-bg-opacity: 1;
   background-color: rgb(6 56 95 / var(--tw-bg-opacity));
@@ -969,6 +989,15 @@ video {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.object-cover {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.p-\[25px\] {
+  padding: 25px;
 }
 
 .px-\[10px\] {
@@ -999,6 +1028,11 @@ video {
 .py-\[10px\] {
   padding-top: 10px;
   padding-bottom: 10px;
+}
+
+.py-\[24px\] {
+  padding-top: 24px;
+  padding-bottom: 24px;
 }
 
 .py-\[30px\] {
@@ -1033,6 +1067,10 @@ video {
 
 .pt-\[50px\] {
   padding-top: 50px;
+}
+
+.pt-\[80px\] {
+  padding-top: 80px;
 }
 
 .text-left {
@@ -1430,6 +1468,15 @@ p {
   #blog_content {
     margin-top: 0px !important;
   }
+
+  .blog-card:nth-child(1):before,
+    .blog-card:nth-child(7):before {
+    left: 0px !important;
+  }
+
+  .three-columns-custom {
+    padding: 60px 40px 0px 40px !important;
+  }
 }
 
 /* Contact Form */
@@ -1616,6 +1663,53 @@ p {
   margin-top: 60px;
 }
 
+.thumbnail img {
+  border-radius: 16px;
+  width: 100%;
+  position: relative;
+  z-index: 50;
+}
+
+.pagination .current {
+  color: #06385F;
+  font-weight: 500;
+}
+
+.blog-card:nth-child(1):before,
+.blog-card:nth-child(7):before {
+  position: absolute;
+  content: "";
+  border-radius: 50%;
+  width: 200px;
+  height: 97px;
+  background: rgb(181, 211, 234);
+  filter: blur(40px);
+  bottom: 70px;
+  left: -81px;
+  z-index: 4;
+}
+
+.blog-card:nth-child(9):before {
+  position: absolute;
+  content: "";
+  border-radius: 50%;
+  width: 200px;
+  height: 97px;
+  background: rgb(181, 211, 234);
+  filter: blur(40px);
+  bottom: 30px;
+  right: 0px;
+  z-index: 4;
+}
+
+.three-columns-custom{
+  padding: 150px 112px 0px 112px;
+}
+
+#three-column:nth-child(1) {
+  position: relative;
+}
+
 .before\:absolute::before {
   content: var(--tw-content);
   position: absolute;
@@ -1651,11 +1745,6 @@ p {
   top: 30px;
 }
 
-.before\:top-\[5\%\]::before {
-  content: var(--tw-content);
-  top: 5%;
-}
-
 .before\:z-40::before {
   content: var(--tw-content);
   z-index: 40;
@@ -1674,11 +1763,6 @@ p {
 .before\:h-\[75\%\]::before {
   content: var(--tw-content);
   height: 75%;
-}
-
-.before\:h-\[80\%\]::before {
-  content: var(--tw-content);
-  height: 80%;
 }
 
 .before\:h-\[80px\]::before {
@@ -1748,11 +1832,6 @@ p {
   height: 70%;
 }
 
-.after\:h-\[80\%\]::after {
-  content: var(--tw-content);
-  height: 80%;
-}
-
 .after\:w-\[73px\]::after {
   content: var(--tw-content);
   width: 73px;
@@ -1794,6 +1873,14 @@ p {
 
   .lg\:mb-0 {
     margin-bottom: 0px;
+  }
+
+  .lg\:mb-\[100px\] {
+    margin-bottom: 100px;
+  }
+
+  .lg\:mb-\[85px\] {
+    margin-bottom: 85px;
   }
 
   .lg\:ml-0 {
@@ -1862,6 +1949,10 @@ p {
 
   .lg\:w-\[32\%\] {
     width: 32%;
+  }
+
+  .lg\:w-\[33\.3\%\] {
+    width: 33.3%;
   }
 
   .lg\:w-\[40\%\] {
@@ -1940,9 +2031,19 @@ p {
     row-gap: 90px;
   }
 
+  .lg\:px-\[120px\] {
+    padding-left: 120px;
+    padding-right: 120px;
+  }
+
   .lg\:px-\[150px\] {
     padding-left: 150px;
     padding-right: 150px;
+  }
+
+  .lg\:px-\[25px\] {
+    padding-left: 25px;
+    padding-right: 25px;
   }
 
   .lg\:px-\[31px\] {
@@ -1961,6 +2062,14 @@ p {
 
   .lg\:pb-\[100px\] {
     padding-bottom: 100px;
+  }
+
+  .lg\:pb-\[110px\] {
+    padding-bottom: 110px;
+  }
+
+  .lg\:pt-\[196px\] {
+    padding-top: 196px;
   }
 
   .lg\:text-center {
