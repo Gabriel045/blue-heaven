@@ -29,11 +29,22 @@ if (!empty($block['align'])) {
 
 // Load values and assign defaults.
 
-$sections  = get_field('section'); ?>
+$sections            = get_field('section');
+$title_section       = get_field('title');
+$paragraph           = get_field('paragraph');?>
+
 
 <section class="<?php echo (!empty($sections[0]['cta_url'])) ? 'bg-[#F9FAFB]' : '' ?> relative">
     <div class="block_content">
-        <?php foreach ($sections as $key => $section) :
+        <?php if (!empty($title_section)) : ?>
+            <div class="mb-[60px] lg:mb-[100px] last:mb-0 direction flex flex-col items-center relative z-[50]
+            before:content-[''] before:absolute before:w-[300px] before:h-[80px] before:bg-[#B5D3EA] before:blur-[40px] before:z-40">
+                <h2 class="relative z-50 " style="margin-top:0px"> <?php echo $title_section ?> </h2>
+                <p class="text-[#475467] my-[40px] relative z-50 text-center lg:w-[70%]"><?php echo $paragraph ?> </p>
+            </div>
+        <?php
+        endif;
+        foreach ($sections as $key => $section) :
             $image_position    = $section['image_position'];
             $image             = $section['image'];
             $title             = $section['title'];
@@ -45,7 +56,7 @@ $sections  = get_field('section'); ?>
             <div class="mb-[100px] last:mb-0 direction flex flex-wrap lg:flex-nowrap gap-[40px] lg:gap-[80px] lg:flex-<?php echo $image_position ?> flex-col-reverse">
                 <?php if (!empty($image)) : ?>
                     <div class="w-full lg:w-[45%]">
-                        <img class="lg:w-[547px] lg:h-[447px] m-auto lg:m-0 rounded-[10px] relative z-50 object-cover" src="<?php echo $image ?>" alt="">
+                        <img class="lg:w-[547px] lg:h-full lg:min-h-[425px] m-auto lg:m-0 rounded-[10px] relative z-50 object-cover" src="<?php echo $image ?>" alt="">
                     </div>
                 <?php endif ?>
 
@@ -60,7 +71,8 @@ $sections  = get_field('section'); ?>
 
         <?php endforeach ?>
     </div>
-    <?php echo (!empty($cta_url)) ? '<img class="absolute top-[-24%] right-[0] lg:h-[50vw] h-[500px] lg:w-auto" src=" ' . get_stylesheet_directory_uri() . '/assets/images/hexagon-3.svg">' : '' ?>
+    <?php echo (!empty($cta_url)) ? '<img class="absolute top-[-24%] right-0 lg:h-[50vw] h-[500px]" src=" ' . get_stylesheet_directory_uri() . '/assets/images/hexagon-3.svg">' : '' ?>
+    <?php echo (!empty($title_section)) ?  '<img class="absolute rotate-180 top-[30%] left-0 h-[500px] lg:h-auto" src=" ' . get_stylesheet_directory_uri() . '/assets/images/hexagon-3.svg">' : '' ?>
     <?php echo (count($sections) >= 2)  ?  '<img class="absolute lg:hidden w-[300px] h-[800px] right-0 top-[20%]" src=" ' . get_stylesheet_directory_uri() . '/assets/images/hexagon-3.svg">' : '' ?>
     <?php echo (count($sections) >= 3)  ?  '<img class="absolute rotate-180 lg:hidden w-[300px] h-[800px] left-0 bottom-0" src=" ' . get_stylesheet_directory_uri() . '/assets/images/hexagon-3.svg">' : '' ?>
 </section>

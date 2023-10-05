@@ -40,7 +40,7 @@
       <div class="div px-[40px] pb-[70px]">
         <?php echo wp_nav_menu("3"); ?>
         <div class="pt-[50px]">
-          <a href="#" class="py-[10px] px-[20px] rounded-[8px] mr-[18px] mt-[50px] bg-white text-primary text-[18px] font-[500] relative z-50">Get Started</a>
+          <a href="<?php echo get_field('cta_url_header', 'option')['cta_url_header'] ?> " class="py-[10px] px-[20px] rounded-[8px] mr-[18px] mt-[50px] bg-white text-primary text-[18px] font-[500] relative z-50">Get Started</a>
         </div>
       </div>
     </div>

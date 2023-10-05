@@ -43,11 +43,11 @@ $items           = get_field('items');
                 <h2 class="mb-[46px] z-50 relative"><?php echo $title ?></h2>
                 <?php echo (!empty($cta["url"])) ? '<a target="_blank" href="' . $cta["url"] . '" class="button_hover hidden lg:inline-block  button_custom  relative z-50">' . $cta['text'] . '</a>' : '' ?>
             </div>
-            <div class="lg:w-1/2 relative before:content-[''] before:w-[2px] <?php echo (count($items) <= 3) ? 'before:h-[60%]' : 'before:h-[75%]' ?> before:z-40 before:top-[30px] before:bg-[#06385fb5] before:block before:absolute before:left-[26px]
+            <div class="bf lg:w-1/2 relative before:content-[''] before:w-[2px] before:z-40 before:top-[5px] before:bg-[#06385fb5] before:block before:absolute before:left-[26px]
              after:content-['']  after:w-[73px] after:h-[70%] after:bg-[#B5D3EA] after:block after:absolute after:top-[10%] after:left-[-10px] after:z-30 after:blur-[40px]">
 
                 <?php foreach ($items as $key => $item) : ?>
-                    <div class="flex  items-start mb-[60px]">
+                    <div class="item-content flex  items-start mb-[60px]">
                         <div class="w-[20%]">
                             <img class="w-[52px] h-[52px] relative z-50" src="<?php echo $item['icon'] ?>" alt="">
                         </div>
@@ -61,4 +61,26 @@ $items           = get_field('items');
             </div>
         </div>
     </div>
+    <div id="style"></div>
 </section>
+
+<script>
+    function line(height) {
+        document.querySelector("#style").innerHTML =
+            `<style> .bf::before { height: calc(100% - ${height}px)} </style>`
+    }
+
+    window.addEventListener("load", (event) => {
+        let nodes = document.querySelectorAll(".item-content")
+        let lasIttem = nodes[nodes.length - 1]
+        let height = lasIttem.offsetHeight + 30
+
+        line(height)
+
+        window.addEventListener("resize", () => {
+            let height = lasIttem.offsetHeight + 30 
+            line(height)
+            console.log(height);
+        });
+    })
+</script>

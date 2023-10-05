@@ -15,4 +15,6 @@ function register_acf_blocks()
     register_block_type(__DIR__ . '/blocks/text-cta');
     register_block_type(__DIR__ . '/blocks/team');
     register_block_type(__DIR__ . '/blocks/three-columns');
+    register_block_type(__DIR__ . '/blocks/list-state');
+    register_block_type(__DIR__ . '/blocks/checklist');
 }

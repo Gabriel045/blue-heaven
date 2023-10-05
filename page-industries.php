@@ -31,7 +31,7 @@ the_content();
             <?php endforeach ?>
         </div>
     </div>
-    <img class="absolute h-[800px] right-0 top-[20%]" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/hexagon-3.svg" alt="">
+    <img decoding="async" class="absolute lg:block right-0 top-[5%]" src=" <?php echo get_stylesheet_directory_uri() ?>/assets/images/hexagon-6.svg">
 </section>
 
 <?php get_footer();

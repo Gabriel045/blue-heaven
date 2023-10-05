@@ -1,18 +1,18 @@
 {
-    "name": "acf/checklist",
-    "title": "Checklist",
-    "description": "A custom Checklist block.",
+    "name": "acf/list-statee",
+    "title": "List State",
+    "description": "A custom List State block.",
     "style": [
         "file:../../dist/output.css"
     ],
     "category": "custom",
     "icon": "block-default",
     "keywords": [
-        "Checklist"
+        "List State"
     ],
     "acf": {
         "mode": "preview",
-        "renderTemplate": "checklist.php"
+        "renderTemplate": "list-state.php"
     },
     "align": "full"
 }
