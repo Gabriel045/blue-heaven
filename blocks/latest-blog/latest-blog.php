@@ -67,11 +67,7 @@ $query = new WP_Query($args);
                 </div>
             <?php endforeach ?>
         </div>
-
-        <?php echo (is_front_page()) ? '<a target="_blank" href="/blogs" class="button_hover hidden lg:inline-block  button_custom  relative z-50">See More</a>' : '' ?>
-            
-       
-
+        <?php echo (is_front_page()) ? '<a target="_blank" href="/blogs" class="mt-[150px] button_hover hidden lg:inline-block  button_custom  relative z-50">See More</a>' : '' ?>
     </div>
     <?php echo (!is_front_page()) ? '<img class="absolute top-[-24%] right-[0] lg:h-[50vw] h-[500px] lg:w-auto" src=" ' . get_stylesheet_directory_uri() . '/assets/images/hexagon-3.svg">' : '' ?>
 </section>

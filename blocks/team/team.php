@@ -43,7 +43,7 @@ $team_members       = get_field('team_members');
         </div>
         <div class="flex flex-wrap w-full">
             <?php foreach ($team_members as $key => $team_member) : ?>
-                <div class="w-full lg:w-[25%] pb-[45px] last:pb-0 ">
+                <div class="team-card w-full lg:w-[25%] pb-[45px] last:pb-0 relative">
                     <div class="px-[10px]">
                         <img class="relative z-50 rounded-[10px] w-full" src="<?php echo $team_member["image"] ?>" alt="">
                         <div>
