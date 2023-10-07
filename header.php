@@ -19,7 +19,7 @@
   <header id="header_menu " class="flex justify-center relative bg-primary overflow-x-clip">
     <div class="block_content max-w-[1440px] w-full items-center flex absolute z-[999]" style="padding-top:40px; padding-bottom:40px">
       <div class="w-[50%] lg:w-[15%]">
-        <a href="/home"> <img class="w-[140px] lg:w-[180px]" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/Logo.svg" alt=""></a>
+        <a href="/home"> <img class="h-[100px] w-auto relative z-40" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/bh-logopng.png" alt=""></a>
       </div>
       <div class="hidden lg:flex w-[65%]  justify-end">
         <?php echo wp_nav_menu("3"); ?>

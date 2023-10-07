@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+
+@font-face {
+    font-family: Inter;
+    src: url('../assets/fonts/inter/Inter-Thin.ttf');
+    font-weight: 200;
+}
+
 @font-face {
     font-family: Inter;
     src: url('../assets/fonts/inter/Inter-Light.ttf');
@@ -29,6 +36,17 @@ body {
     max-width: 1440px;
     padding: 150px 112px;
     width: 100%;
+}
+
+
+.content {
+    max-width: 1440px;
+    padding: 0px 112px;
+    width: 100%;
+}
+
+.content h2 {
+    margin: 40px 0px;
 }
 
 section {
@@ -101,14 +119,7 @@ p {
     z-index: 4;
 }
 
-.line::before {
-    content: "";
-    width: 2px;
-    height: 100%;
-    background-color: #06385F;
-    display: block;
-    position: absolute;
-}
+
 
 /* the slides */
 .slick-slide {
@@ -330,6 +341,7 @@ p {
 #gform_fields_1 textarea {
     border: 1px solid #D0D5DD;
     border-radius: 8px;
+    outline: none;
 }
 
 #gform_fields_1 label {
@@ -351,7 +363,7 @@ p {
 }
 
 .hero-form #gform_fields_1 input::placeholder,
-.hero-form #gform_fields_1 textarea::placeholder  {
+.hero-form #gform_fields_1 textarea::placeholder {
     color: #ffffff91;
 }
 
@@ -370,18 +382,20 @@ p {
 
 }
 
-.hero-form #gform_fields_1 .ginput_container--name{
+.hero-form #gform_fields_1 .ginput_container--name {
     display: flex;
     flex-direction: column;
 }
-.hero-form #gform_fields_1 .ginput_container--name span{
+
+.hero-form #gform_fields_1 .ginput_container--name span {
     width: 100%;
 }
-.hero-form #gform_fields_1 .ginput_container--name span label{
+
+.hero-form #gform_fields_1 .ginput_container--name span label {
     margin-bottom: 5px;
 }
 
-.hero-form #gform_fields_1 .ginput_container--name span:nth-child(1){
+.hero-form #gform_fields_1 .ginput_container--name span:nth-child(1) {
     margin-bottom: 10px;
 }
 
@@ -421,7 +435,6 @@ p {
 }
 
 .menu-mobile-container.active {
-    top: 80px;
     right: 0;
     opacity: 1;
     transition: all 0.8s ease-out;
@@ -429,7 +442,7 @@ p {
 
 .menu-mobile-container {
     right: -600px;
-    top: 80px;
+    top: 150px;
     opacity: 0;
     display: block;
     transition: all 0.8s ease-in;
@@ -615,7 +628,8 @@ p {
     right: 0px;
     z-index: 4;
 }
-.industry-card:nth-child(2):before{
+
+.industry-card:nth-child(2):before {
     position: absolute;
     content: "";
     border-radius: 50%;
@@ -627,8 +641,9 @@ p {
     right: 0px;
     z-index: 4;
 }
+
 .industry-card:nth-child(3):before,
-.industry-card:last-child::before{
+.industry-card:last-child::before {
     position: absolute;
     content: "";
     border-radius: 50%;
@@ -691,7 +706,7 @@ p {
     z-index: 4;
 }
 
-.team-card:nth-child(4)::before{
+.team-card:nth-child(4)::before {
     position: absolute;
     content: "";
     border-radius: 50%;
@@ -703,7 +718,8 @@ p {
     right: 0px;
     z-index: 4;
 }
-.team-card:nth-child(9)::before{
+
+.team-card:nth-child(9)::before {
     position: absolute;
     content: "";
     border-radius: 50%;
@@ -716,6 +732,186 @@ p {
     z-index: 4;
 }
 
-.learn_more:hover img{
+.learn_more:hover img {
     transform: translateX(2px);
-} 
+}
+
+/* calculator form */
+
+
+#gform_2 {
+    width: 610px;
+    background-color: #06385F;
+    border-radius: 18px;
+    padding: 60px;
+
+    .states .gfield_radio {
+        height: 335px;
+        overflow-y: scroll;
+        background-color: #ffffff0d;
+        padding: 30px;
+        border-radius: 12px;
+        margin-top: 40px;
+
+        .gchoice {
+            margin-bottom: 20px;
+        }
+    }
+
+    .gform_next_button,
+    .gform_previous_button,
+    input[type="submit"] {
+        width: 100%;
+        background: #fff;
+        border-radius: 8px;
+        padding: 8px;
+        font-size: 18px;
+        color: #06385F;
+        font-weight: 500;
+        margin-top: 60px;
+        cursor: pointer;
+    }
+
+    .states-step .gform_previous_button,
+    .industry-step .gform_previous_button {
+        width: 45% !important;
+        background: #ffffff33 !important;
+        color: #ffffffab !important;
+    }
+
+    .states-step .gform_next_button,
+    .industry-step .gform_next_button {
+        width: 45% !important;
+    }
+
+    .ginput_container input[type="text"],
+    .ginput_container input[type="email"] {
+        background-color: #ffffff54;
+        border-radius: 8px;
+        border: 1px solid #d0d5dd54;
+        padding: 10px 20px;
+        color: #fff;
+        outline: none;
+    }
+
+    .ginput_container input[type="email"]{
+         margin-top: 20px;
+    }
+
+    #gform_submit_button_2{
+        margin-top: 15px;
+        margin-left: 0px;
+    }
+    #gform_previous_button_2{
+        margin-top: 30px;
+    }
+
+    .w65 {
+        display: flex;
+        margin-top: 20px;
+        position: relative;
+
+        .gfield_label {
+            width: 35%;
+            margin: auto;
+            color: #fff;
+            font-size: 16px;
+            font-weight: 400;
+            position: relative;
+        }
+
+        .gfield_label::before {
+            content: "";
+            width: 1px;
+            background: #FFF;
+            height: 61px;
+            position: absolute;
+            top: 19px;
+            left: 100px;
+        }
+
+        .ginput_container {
+            width: 65%;
+        }
+
+        .checked {
+            background: #FFF !important;
+            transition: all 1s ease;
+        }
+
+        .bullet {
+            width: 20px;
+            height: 20px;
+            background-color: #ffffff54;
+            border-radius: 100px;
+            position: absolute;
+            left: 90px;
+            top: 10px;
+            transition: all 1s ease;
+        }
+    }
+
+    .w65.last {
+        .gfield_label::before {
+            height: 0px;
+        }
+    }
+
+    .states {
+        .gform-field-label {
+            font-size: 20px;
+            color: #ffffff99;
+            font-weight: 400;
+            margin-left: 20px;
+        }
+
+        .gfield-choice-input {
+            outline: none;
+            accent-color: #597992;
+            width: 20px;
+            height: 20px;
+        }
+
+    }
+
+    .industry-step .gfield_radio {
+        .gchoice {
+            padding: 10px 0px;
+            border-radius: 10px;
+            margin: 0px;
+
+            .gfield-choice-input {
+                /*display: none;*/
+                margin-right: 20px;
+            }
+
+            .gform-field-label {
+                cursor: pointer;
+                margin: 0px;
+            }
+        }
+
+    }
+
+    .industry-step select {
+        padding: 10px 20px;
+        border-radius: 8px;
+        font-size: 18px;
+        color: #124267;
+        outline: none;
+
+    }
+
+    .email-step{
+        .gform_previous_button{
+            display: none;
+        }
+    } 
+
+    .gfield_description{
+        display: none;
+    }
+
+}
+
+

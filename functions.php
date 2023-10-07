@@ -6,11 +6,6 @@ add_action('wp_enqueue_scripts', 'af_add_theme_scripts');
 
 function af_add_theme_scripts() {
 
-    wp_enqueue_style(
-        'theme-styles',
-        get_template_directory_uri() . '/assets/styles/styles.css',
-    );
-
     wp_enqueue_script(
         'theme-main-script',
         get_template_directory_uri() . '/assets/js/main.js',
@@ -80,3 +75,28 @@ if (function_exists('acf_add_options_page')) {
 
 //Register ACF blocks
 include_once('acf-blocks.php');
+
+
+add_filter('gform_confirmation', 'custom_confirmation', 10, 4);
+function custom_confirmation($confirmation, $form, $lead, $ajax)
+{
+    if ($form['id'] == '2') {
+
+        $year2023 = is_numeric($lead['3']);
+        $year2022 = is_numeric($lead['4']);
+        $year2021 = is_numeric($lead['5']);
+        $year2020 = is_numeric($lead['6']);
+        $year2019 = is_numeric($lead['7']);
+
+        $sum_total = $year2023 + $year2022 + $year2021 + $year2020 + $year2019;
+
+        //echo "<pre>";
+        var_dump($year2023);
+        var_dump($year2019);
+        //echo "</pre>";
+
+    }
+    return $confirmation;
+}
+
+

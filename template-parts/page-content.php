@@ -3,8 +3,13 @@
 </main>
 
 <script>
-    let firstChill = document.querySelectorAll("#three-columns")
 
+    let main = document.querySelector('main')
+        
+    console.log(main.childNodes );
+
+
+    let firstChill = document.querySelectorAll("#three-columns")
     firstChill[0].innerHTML += `<img class="absolute w-[300px] h-[800px] right-0 top-[30%]" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/hexagon-3.svg" alt="">`
     firstChill[0].style.position = "relative"
 
