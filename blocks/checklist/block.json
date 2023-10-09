@@ -1,20 +1,18 @@
 {
-    "name": "acf/text-image-block",
-    "title": "Text Image Block",
-    "description": "A custom Text Image Block block.",
+    "name": "acf/checklist",
+    "title": "Checklist",
+    "description": "A custom Checklist block.",
     "style": [
         "file:../../dist/output.css"
     ],
     "category": "custom",
     "icon": "block-default",
     "keywords": [
-        "Text",
-        "Image",
-        "Block"
+        "Checklist"
     ],
     "acf": {
         "mode": "preview",
-        "renderTemplate": "text-image-block.php"
+        "renderTemplate": "checklist.php"
     },
     "align": "full"
 }

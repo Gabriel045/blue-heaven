@@ -15,7 +15,7 @@ the_content();
 
 <section class="relative">
     <div class="block_content relative text-center ">
-        <div class="mt-[110px] flex gap-[6%] lg:gap-y-[90px] gap-y-[30px] flex-wrap">
+        <div class="flex gap-[6%] lg:gap-y-[90px] gap-y-[30px] flex-wrap">
             <?php foreach ($query->posts as $key => $post) :  ?>
                 <div class="industry-card w-full lg:w-[47%] relative z-50">
                     <div class="thumbnail_industries">

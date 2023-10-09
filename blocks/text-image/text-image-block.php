@@ -31,7 +31,7 @@ if (!empty($block['align'])) {
 
 $sections            = get_field('section');
 $title_section       = get_field('title');
-$paragraph           = get_field('paragraph');?>
+$paragraph           = get_field('paragraph'); ?>
 
 
 <section class="<?php echo (!empty($sections[0]['cta_url'])) ? 'bg-[#F9FAFB]' : '' ?> relative">
@@ -56,7 +56,7 @@ $paragraph           = get_field('paragraph');?>
             <div class="mb-[100px] last:mb-0 direction flex flex-wrap lg:flex-nowrap gap-[40px] lg:gap-[80px] lg:flex-<?php echo $image_position ?> flex-col-reverse">
                 <?php if (!empty($image)) : ?>
                     <div class="w-full lg:w-[45%]">
-                        <img class="lg:w-[547px] lg:h-full lg:min-h-[425px] m-auto lg:m-0 rounded-[10px] relative z-50 object-cover" src="<?php echo $image ?>" alt="">
+                        <img class="w-[350px] h-[286px] lg:w-[547px] lg:h-full lg:min-h-[425px]  rounded-[10px] relative z-50 object-cover" src="<?php echo $image ?>" alt="">
                     </div>
                 <?php endif ?>
 
@@ -68,7 +68,6 @@ $paragraph           = get_field('paragraph');?>
                     </div>
                 </div>
             </div>
-
         <?php endforeach ?>
     </div>
     <?php echo (!empty($cta_url)) ? '<img class="absolute top-[-24%] right-0 lg:h-[50vw] h-[500px]" src=" ' . get_stylesheet_directory_uri() . '/assets/images/hexagon-3.svg">' : '' ?>

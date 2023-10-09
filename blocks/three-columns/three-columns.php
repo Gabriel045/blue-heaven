@@ -44,11 +44,6 @@ if ($background == 'White') {
     $bg = 'bg-[#fff]';
 }
 
-if ($layout == 'require') {
-    $h = 'h-[370px]';
-} else {
-    $h = 'h-[270px]';
-}
 ?>
 
 <section id="three-columns" class=" <?php echo ($background == 'Gray') ? 'bg-[#F9FAFB]' :  'bg-[#fff]' ?> ">
@@ -61,15 +56,16 @@ if ($layout == 'require') {
         <?php endif ?>
         <div class="flex flex-row flex-wrap <?php echo ($layout == 'require') ? 'justify-center' : '' ?>">
             <?php foreach ($cards as $key => $card) : ?>
-                <div class="three-col-card w-full lg:w-[33.3%] lg:px-[25px] last:mb-0 <?php echo ($layout != 'normal') ? 'mb-[80px]' : 'mb-0px' ?>  relative z-50">
-                    <div class="<?php echo $bg ?> <?php echo ($layout != 'industry') ? 'p-[25px]' : '' ?> rounded-[10px] relative z-50 <?php echo $h ?>">
-                        <?php echo ($layout == "require") ? '<span class="text-[8px] text-white font-[600] bg-[#06385F] p-[5px] rounded-[3px]">Required</span>' : '' ?>
-                        <img class="relative z-50 w-[48px] h-[48px] my-[10px]" src="<?php echo $card['icon'] ?>" alt="">
-                        <p class="relative z-50 text-[18px] font-[600] text-[#101828] leading-[28px] <?php echo ($layout != 'industry') ? '' : 'mb-[20px]' ?>  "><?php echo $card['text'] ?></p>
-                        <div class="relative z-50 card-container"><?php echo $card['paragraph'] ?></div>
+                <div class="flex three-col-card w-full lg:w-[33.3%] lg:px-[25px] last:mb-0 <?php echo ($layout != 'normal') ? 'mb-[50px]' : 'mb-[60px] lg:mb-0' ?>  relative z-50">
+                    <div class="<?php echo $bg ?> <?php echo ($layout != 'industry') ? 'p-[25px]' : '' ?> rounded-[10px] relative z-50">
+                        <?php echo ($layout == "require") ? '<span class="text-[8px] text-white font-[600] bg-[#06385F] p-[5px] rounded-[3px]">REQUIRED</span>' : '' ?>
+                        <img class="relative z-50 w-[48px] h-[48px] my-[16px]" src="<?php echo $card['icon'] ?>" alt="">
+                        <p class=" <?php echo ($layout == "require") ? 'mb-[10px]' : '' ?>  relative z-50 text-[18px] font-[600] text-[#101828] leading-[28px] <?php echo ($layout != 'industry') ? '' : 'mb-[20px]' ?> "><?php echo $card['text'] ?></p>
+                        <div class=" relative z-50 card-container"><?php echo $card['paragraph'] ?>
                     </div>
                 </div>
-            <?php endforeach ?>
         </div>
+    <?php endforeach ?>
+    </div>
     </div>
 </section>
