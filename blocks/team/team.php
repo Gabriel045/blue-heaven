@@ -56,6 +56,6 @@ $team_members       = get_field('team_members');
             <?php endforeach ?>
         </div>
     </div>
-    <img decoding="async" class="absolute top-[30%] right-[0] h-[800px] w-[200px] lg:w-[300px]" src="https://blueheaven.local/wp-content/themes/blue-heaven/assets/images/hexagon-3.svg">
-    <img decoding="async" class="lg:hidden block rotate-180 absolute bottom-[30%] left-0 w-[200px] " src="https://blueheaven.local/wp-content/themes/blue-heaven/assets/images/hexagon-3.svg">
+    <img loading="lazy" class="absolute top-[30%] right-[0] h-[800px] w-[200px] lg:w-[300px]" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/hexagon-3.svg">
+    <img loading="lazy" class="lg:hidden block rotate-180 absolute bottom-[30%] left-0 w-[200px] " src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/hexagon-3.svg">
 </section>

@@ -43,5 +43,5 @@ $cta                = get_field('cta');
             <?php echo (!empty($cta['url'])) ? '<a href="'.$cta['url'].' " class="button_hover button_custom relative z-50">'.$cta['text'] .'</a>' : '' ?> 
         </div>
     </div>
-    <?php echo (get_post_type() == "post") ? '<img decoding="async" class="absolute hidden lg:block w-[300px] h-[800px] left-0 top-[20%] rotate-180" src="' . get_stylesheet_directory_uri() . '/assets/images/hexagon-3.svg" alt="">' : '' ?>
+    <?php echo (get_post_type() == "post") ? '<img  class="absolute hidden lg:block w-[300px] h-[800px] left-0 top-[20%] rotate-180" src="' . get_stylesheet_directory_uri() . '/assets/images/hexagon-3.svg" alt="">' : '' ?>
 </section>

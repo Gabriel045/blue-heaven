@@ -38,7 +38,7 @@ $address    = get_field('address');
 ?>
 
 <section class="relative">
-    <img decoding="async" class="lg:hidden block absolute top-[200px] right-[0] w-[250px] lg:w-auto" src="https://blueheaven.local/wp-content/themes/blue-heaven/assets/images/hexagon-3.svg">
+    <img  class="lg:hidden block absolute top-[200px] right-[0] w-[250px] lg:w-auto" src="https://blueheaven.local/wp-content/themes/blue-heaven/assets/images/hexagon-3.svg">
     <div class="block_content relative text-center before:content-[''] before:absolute before:w-[300px] before:h-[80px]
      before:bg-[#B5D3EA] before:blur-[40px] before:z-40  before:left-[-50px]">
         <div class="flex gap-[6%] flex-wrap">

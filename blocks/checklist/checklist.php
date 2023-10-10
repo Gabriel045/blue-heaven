@@ -54,7 +54,7 @@ $cta         = get_field("cta");   ?>
             </div>
         </div>
         <div class="w-full lg:w-[50%]">
-            <img class="lg:w-[547px] h-[534px] mt-[60px] lg:mt-0 mx-auto lg:mx-0 rounded-[10px] relative z-50 object-cover" src="<?php echo $image ?>" alt="">
+            <img class="w-[350px]  h-[286px]  lg:w-[547px] lg:h-[534px] mt-[60px] lg:mt-0 mx-auto lg:mx-0 rounded-[10px] relative z-50 object-cover" src="<?php echo $image ?>" alt="">
         </div>
     </div>
 </section>

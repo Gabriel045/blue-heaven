@@ -89,13 +89,10 @@ function custom_confirmation($confirmation, $form, $lead, $ajax)
         $year2019 = ($lead['7']);
 
         $sum_total = $year2023 + $year2022 + $year2021 + $year2020 + $year2019;
-        setlocale(LC_MONETARY, 'en_US');
-        $low =  money_format('%.2n',  $sum_total * 0.09);
-        $high = money_format('%.2n', $sum_total * 0.15);
+        $formatter = new NumberFormatter('en_US', NumberFormatter::CURRENCY);
 
-        //echo "<pre>";
-        //var_dump(=);
-        //echo "</pre>";
+        $low = $formatter->formatCurrency($sum_total * 0.09, 'USD');      
+        $high = $formatter->formatCurrency($sum_total * 0.15, 'USD');
 
         $confirmation = "
         <div class='w-[350px] lg:w-[604px] bg-primary rounded-[18px] min-h-[500px] px-[30px] lg:px-[60px] lg:py-[80px] py-[40px]'> 

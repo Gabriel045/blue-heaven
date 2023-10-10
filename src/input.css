@@ -43,9 +43,10 @@ body {
     max-width: 1440px;
     padding: 0px 112px;
     width: 100%;
+    margin: auto;
 }
 
-.content h2 {
+.contenth2 {
     margin: 40px 0px;
 }
 
@@ -1071,7 +1072,7 @@ p {
 
     .gform-field-label {
         color: #124267;
-    }
+       }
 }
 #gform_2 .industry-step .gfield-choice-input{
     display: none;
@@ -1079,4 +1080,8 @@ p {
 
 #gform_2 .industry-step  {
     padding: 10px 20px !important;
+}
+
+.spf-phone.error-msg{
+    display: none !important;
 }

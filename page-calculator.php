@@ -70,12 +70,12 @@ get_footer();
 
 
     //formating Industry step
-    let choises = document.querySelectorAll(".industry-step .gchoice input")
-    choises.forEach(choise => {
-        choise.addEventListener("change", () => {
+             let choises = document.querySelectorAll(".industry-step .gchoice input")
+    choises.forEach(choise =>     {
+          choise.addEventListener("change", () => {
             choises.forEach(element => {
                 let checked = (element.checked) ? element.parentNode.classList.add("selected") : element.parentNode.classList.remove("selected")
             })
-        })
+                 })   
     });
-</script>
+</script>             

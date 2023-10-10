@@ -769,6 +769,10 @@ video {
   margin-left: 25px;
 }
 
+.mr-\[15px\] {
+  margin-right: 15px;
+}
+
 .mr-\[18px\] {
   margin-right: 18px;
 }
@@ -817,18 +821,6 @@ video {
   margin-top: 70px;
 }
 
-.mr-\[\] {
-  margin-right: ;
-}
-
-.mr-\[10px\] {
-  margin-right: 10px;
-}
-
-.mr-\[15px\] {
-  margin-right: 15px;
-}
-
 .block {
   display: block;
 }
@@ -871,10 +863,6 @@ video {
 
 .h-\[52px\] {
   height: 52px;
-}
-
-.h-\[534px\] {
-  height: 534px;
 }
 
 .h-\[540px\] {
@@ -1383,9 +1371,10 @@ body {
   max-width: 1440px;
   padding: 0px 112px;
   width: 100%;
+  margin: auto;
 }
 
-.content h2 {
+.contenth2 {
   margin: 40px 0px;
 }
 
@@ -2360,6 +2349,10 @@ p {
   padding: 10px 20px !important;
 }
 
+.spf-phone.error-msg{
+  display: none !important;
+}
+
 .before\:absolute::before {
   content: var(--tw-content);
   position: absolute;
@@ -2558,6 +2551,10 @@ p {
 
   .lg\:h-\[50vw\] {
     height: 50vw;
+  }
+
+  .lg\:h-\[534px\] {
+    height: 534px;
   }
 
   .lg\:h-auto {

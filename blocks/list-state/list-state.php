@@ -37,7 +37,7 @@ $list            = get_field('list'); ?>
 
 
 <section class="relative">
-    <img decoding="async" class="absolute lg:block right-0 top-[5%]" src=" <?php echo get_stylesheet_directory_uri() ?>/assets/images/hexagon-6.svg">
+    <img class="absolute lg:block right-0 top-[5%]" src=" <?php echo get_stylesheet_directory_uri() ?>/assets/images/hexagon-6.svg">
     <div class="block_content flex items-center flex-col" style="padding-bottom:0px">
         <div class="mb-[100px] last:mb-0 direction flex flex-col items-center relative z-[50]
         before:content-[''] before:absolute before:w-[300px] before:h-[80px] before:bg-[#B5D3EA] before:blur-[40px] before:z-40">
